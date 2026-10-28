@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>J & Z </title>
+<meta name="description" content="A private anniversary, kept for two people. January 15, 2023 to always.">
+<meta name="robots" content="noindex, nofollow">
+
+<!-- FAVICON — J & Z monogram. SVG is the primary icon (crisp at any
+     size, including a browser tab); PNG/ICO below are fallbacks for
+     browsers that don't support SVG favicons. To swap the logo later,
+     edit assets/icons/jz-logo.svg and re-render the PNG/ICO files. -->
+<link rel="icon" type="image/svg+xml" href="jz-logo.svg">
+<link rel="alternate icon" type="image/png" sizes="32x32" href="assets/icons/jz-32.png">
+<link rel="alternate icon" type="image/png" sizes="16x16" href="assets/icons/jz-16.png">
+<link rel="alternate icon" href="assets/icons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/jz-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= DATE GATE ================= -->
+<section id="date-gate" class="gate" aria-live="polite">
+  <div class="gate-inner">
+    <p class="gate-mark">1029</p>
+    <h1 class="gate-title">Not yet.</h1>
+    <p class="gate-sub">Our next chapter opens on October 29, 2026.</p>
+    <div class="countdown" id="countdown" aria-label="Time remaining until October 29, 2026">
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-days">00</span>
+        <span class="countdown-label">days</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-hours">00</span>
+        <span class="countdown-label">hours</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-minutes">00</span>
+        <span class="countdown-label">minutes</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-seconds">00</span>
+        <span class="countdown-label">seconds</span>
+      </div>
+    </div>
+    <p class="gate-foot">Until then, this stays closed. Manila time.</p>
+  </div>
+</section>
+
+<!-- ================= PADLOCK GATE ================= -->
+<section id="padlock-gate" class="gate" hidden aria-live="polite">
+  <div class="gate-inner">
+    <p class="gate-mark">1029</p>
+    <div class="padlock" id="padlock" aria-hidden="true">
+      <svg viewBox="0 0 120 140" class="padlock-svg">
+        <rect x="10" y="55" width="100" height="75" rx="14" class="padlock-body"/>
+        <path id="padlock-shackle" d="M32 55 V38 a28 28 0 0 1 56 0 V55" class="padlock-shackle"/>
+        <circle cx="60" cy="90" r="7" class="padlock-keyhole-dot"/>
+        <rect x="56.5" y="94" width="7" height="16" rx="3" class="padlock-keyhole-stem"/>
+      </svg>
+      <div class="padlock-glow" id="padlock-glow"></div>
+    </div>
+    <h2 class="gate-title small">Do you remember the number?</h2>
+    <div class="pin-input" id="pin-input">
+      <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="pin-digit" data-index="0" aria-label="Digit 1 of 4">
+      <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="pin-digit" data-index="1" aria-label="Digit 2 of 4">
+      <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="pin-digit" data-index="2" aria-label="Digit 3 of 4">
+      <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="pin-digit" data-index="3" aria-label="Digit 4 of 4">
+    </div>
+    <p class="gate-msg" id="pin-message">&nbsp;</p>
+  </div>
+</section>
+
+<!-- ================= MAIN SITE ================= -->
+<div id="site" hidden>
+
+  <!-- floating nav -->
+  <nav class="nav" id="nav" aria-label="Section navigation">
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+      <span class="nav-toggle-num" id="nav-current">01</span>
+    </button>
+    <ul class="nav-list" id="nav-list">
+      <li><a href="#home" data-section="01">01 — Home</a></li>
+      <li><a href="#our-time" data-section="02">02 — Our Time</a></li>
+      <li><a href="#memories" data-section="03">03 — Memories</a></li>
+      <li><a href="#letter" data-section="04">04 — Letter</a></li>
+      <li><a href="#music" data-section="05">05 — Music</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ 01 HOME / HERO ============ -->
+  <section id="home" class="section hero">
+    <span class="bg-numeral" aria-hidden="true">1029</span>
+    <div class="hero-content reveal">
+      <p class="eyebrow">October 29, 2022</p>
+      <h1 class="hero-line">4 years.</h1>
+      <h2 class="hero-line accent-line">And somehow, I'd still choose you.</h2>
+      <a href="#our-time" class="scroll-cue" aria-label="Scroll to Our Time">
+        <span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ 02 OUR TIME ============ -->
+  <section id="our-time" class="section our-time">
+    <div class="section-head reveal">
+      <p class="eyebrow">Since October 29, 2022</p>
+      <h2 class="section-title">Every second, still counting.</h2>
+    </div>
+    <div class="counter reveal" id="counter" aria-live="off">
+      <div class="counter-unit">
+        <span class="counter-num" id="c-years">0</span>
+        <span class="counter-label">years</span>
+      </div>
+      <div class="counter-unit">
+        <span class="counter-num" id="c-months">0</span>
+        <span class="counter-label">months</span>
+      </div>
+      <div class="counter-unit">
+        <span class="counter-num" id="c-days">0</span>
+        <span class="counter-label">days</span>
+      </div>
+      <div class="counter-unit">
+        <span class="counter-num" id="c-hours">00</span>
+        <span class="counter-label">hours</span>
+      </div>
+      <div class="counter-unit">
+        <span class="counter-num" id="c-minutes">00</span>
+        <span class="counter-label">minutes</span>
+      </div>
+      <div class="counter-unit">
+        <span class="counter-num" id="c-seconds">00</span>
+        <span class="counter-label">seconds</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       MEMORIES — EDIT CONTENT HERE
+       Everything a normal edit needs — photos, dates, titles,
+       captions — lives directly below in plain HTML. No JavaScript
+       knowledge required: change the text, change the --photo path,
+       copy an <article> block to add a memory, delete one to remove it.
+       ========================================================= -->
+  <section id="memories" class="section memories">
+    <div class="section-head reveal">
+      <p class="eyebrow">A scrapbook, mostly for us</p>
+      <h2 class="section-title">Memories</h2>
+      <p class="section-note">Tap a card to open it.</p>
+    </div>
+
+    <div class="memory-track" id="memory-track">
+
+      <!-- MEMORY CARD 1 — edit the text below and the photo path above it -->
+      <article class="memory-card reveal" tabindex="0" role="button" aria-haspopup="dialog"
+        data-title="First Date" data-date="January 15, 2023" data-location="Disctrict, Dasmariñas"
+        data-desc="Our first date atn District! We snuck out even with a PT to do, just wandering around, haha. Still one of my favorite memories.">
+        <div class="memory-photo" style="--photo: url('one.jpg');"></div>
+        <div class="memory-info">
+          <p class="memory-date">January 15, 2023</p>
+          <h3 class="memory-title">First Date</h3>
+        </div>
+      </article>
+
+      <!-- MEMORY CARD 2 — edit the text below and the photo path above it -->
+      <article class="memory-card reveal" tabindex="0" role="button" aria-haspopup="dialog"
+        data-title="2nd Valentine's" data-date="February 14, 2024" data-location="SNHS"
+        data-desc="We matched perfectly even though we weren’t following the color code! This is one of my favorite Valentine’s because we made the most of our gifts and our quality time before class started.">
+        <div class="memory-photo" style="--photo: url('two.jpg');"></div>
+        <div class="memory-info">
+          <p class="memory-date">February 14, 2024</p>
+          <h3 class="memory-title">2nd Valentine's</h3>
+        </div>
+      </article>
+
+      <!-- MEMORY CARD 3 — edit the text below and the photo path above it -->
+      <article class="memory-card reveal" tabindex="0" role="button" aria-haspopup="dialog"
+        data-title="2nd Anniversary" data-date="October 29, 2024" data-location="SM Aura/BGC"
+        data-desc="Our 2nd bebetime in BGC, and I enjoyed it so much! We made the most of it even though we mostly just walked around and had coffee.">
+        <div class="memory-photo" style="--photo: url('three.jpg');"></div>
+        <div class="memory-info">
+          <p class="memory-date">October 29, 2024</p>
+          <h3 class="memory-title">2nd Anniversary</h3>
+        </div>
+      </article>
+
+      <!-- MEMORY CARD 4 — edit the text below and the photo path above it -->
+      <article class="memory-card reveal" tabindex="0" role="button" aria-haspopup="dialog"
+        data-title="4th Anniversary" data-date="4th Anniversary!" data-location="Molito, Alabang"
+        data-desc="Didn’t realize how time flies. Can you imagine we’re spending our 4th year together already? Sobrang secured ko na talaga. Best date night so far!">
+        <div class="memory-photo" style="--photo: url('four.jpg');"></div>
+        <div class="memory-info">
+          <p class="memory-date">October 24, 2026</p>
+          <h3 class="memory-title">4th Anniversary!</h3>
+        </div>
+      </article>
+
+      <!-- To add another memory: copy one whole <article class="memory-card"> block
+           (from "<article" to "</article>") and paste it here, then change its
+           data-title / data-date / data-location / data-desc, the --photo path,
+           and the visible date + title text inside it. -->
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       LETTER — EDIT CONTENT HERE
+       Change the salutation, write your letter as one or more <p>
+       paragraphs, and change the closing line — all plain text below.
+       ========================================================= -->
+  <section id="letter" class="section letter">
+    <div class="letter-paper reveal">
+      <p class="letter-to">To my favorite person,</p>
+      <div class="letter-body" id="letter-body">
+        <p>I hope you’re doing well. I know the distance can be hard sometimes, but I always pray and wish for our relationship to grow even stronger. Please take care of yourself, and know that I’m always just one call away whenever you need anything.
+
+I love you to the moon and back.</p>
+      </div>
+      <p class="letter-sign">Happy 4th Anniversary.</p>
+    </div>
+  </section>
+
+  <!-- ============ 05 MUSIC ============ -->
+  <section id="music" class="section music-section">
+    <div class="section-head reveal">
+      <p class="eyebrow">Press play. This one's for us.</p>
+      <h2 class="section-title">Libu-Libong Buwan</h2>
+    </div>
+
+    <!-- Center play button — mirrors and stays in sync with the
+         persistent player via the shared #audio element in script.js.
+         Added per request; does not replace the persistent player. -->
+    <button class="music-cta reveal" id="music-cta" type="button" aria-pressed="false" aria-label="Play Libu-Libong Buwan">
+      <span class="music-cta-ring" aria-hidden="true"></span>
+      <svg class="music-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <polygon class="icon-play" points="9,6.5 9,17.5 18,12"></polygon>
+        <g class="icon-pause">
+          <rect x="7.5" y="6.5" width="3.2" height="11" rx="1"></rect>
+          <rect x="13.3" y="6.5" width="3.2" height="11" rx="1"></rect>
+        </g>
+      </svg>
+    </button>
+  </section>
+
+  <!-- ============ FINAL ============ -->
+  <section id="final" class="section final">
+    <div class="final-content reveal">
+      <p class="final-line">Here's to every version of us we've been,</p>
+      <p class="final-line">and every version still waiting for us.</p>
+      <p class="final-date">October 29, 2022 → Forever</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>1029</p>
+  </footer>
+
+</div>
+
+<!-- ================= PERSISTENT MUSIC PLAYER ================= -->
+<div class="player" id="player" hidden>
+  <button class="player-disc" id="player-toggle" aria-label="Play Libu-Libong Buwan" aria-pressed="false">
+    <svg viewBox="0 0 60 60" class="disc-svg" id="disc-svg">
+      <circle cx="30" cy="30" r="28" class="disc-ring"/>
+      <circle cx="30" cy="30" r="18" class="disc-groove"/>
+      <circle cx="30" cy="30" r="5" class="disc-center"/>
+    </svg>
+    <span class="visualizer" id="visualizer" aria-hidden="true">
+      <i></i><i></i><i></i><i></i>
+    </span>
+  </button>
+  <span class="player-label" id="player-label">Libu-Libong Buwan</span>
+</div>
+
+<audio id="audio" src="Libu-Libong Buwan (Uuwian) - Kyle Raphael (Official Music Video).mp3" preload="none" loop></audio>
+
+<!-- ================= MEMORY MODAL ================= -->
+<div class="modal-overlay" id="modal-overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-photo" id="modal-photo"></div>
+    <p class="modal-date" id="modal-date"></p>
+    <h3 class="modal-title" id="modal-title"></h3>
+    <p class="modal-location" id="modal-location"></p>
+    <p class="modal-desc" id="modal-desc"></p>
+  </div>
+</div>
+
+<!-- =========================================================
+     DEVELOPER PANEL — only ever created when PREVIEW_MODE is
+     true in script.js. Toggle with Ctrl+Shift+P. Not part of
+     the anniversary design; never shown to normal visitors.
+     ========================================================= -->
+<div class="dev-panel" id="dev-panel" hidden>
+  <p class="dev-panel-title">Dev Panel <span>Ctrl+Shift+P</span></p>
+  <button id="dev-preview-toggle" type="button">Preview Mode: ON</button>
+  <button id="dev-skip-date" type="button">Skip Date Lock</button>
+  <button id="dev-test-padlock" type="button">Test Padlock</button>
+  <button id="dev-test-music" type="button">Test Music</button>
+  <button id="dev-reset" type="button">Reset Website</button>
+  <button id="dev-close" type="button" class="dev-panel-close">Close Developer Panel</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
